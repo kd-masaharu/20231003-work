@@ -1,8 +1,13 @@
 from math import ceil
 
 def calc_account(m):
-    # 実装は入れていません、自分で入れてください
-    pass
+    if m <= 0: return None
+
+    base_price = 610
+    add_m = max(0,m - 1700)
+    add_price = ceil(add_m/315) * 80
+    return base_price + add_price 
+
 
 if __name__ == "__main__":
     from argparse import ArgumentParser
